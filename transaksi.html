@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Syndicate - Transaksi</title>
+    <meta
+      name="description"
+      content="Lihat riwayat transaksi boosting game Anda di Syndicate. Temukan detail order, tanggal transaksi, status, dan nominal dengan mudah."
+    />
+    <meta
+      name="keywords"
+      content="transaksi, riwayat transaksi, game boosting, joki game, boosting game, order history"
+    />
+    <meta name="author" content="Syndicate" />
+    <link rel="canonical" href="https://syndicate-gaming.com/transaksi.html" />
+    <meta
+      property="og:title"
+      content="Riwayat Transaksi Boosting Game - Syndicate"
+    />
+    <meta
+      property="og:description"
+      content="Cek dan cari riwayat transaksi boosting game Anda dengan mudah di Syndicate."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://syndicate-gaming.com/transaksi.html"
+    />
+    <meta property="og:image" content="/images/og-image.jpg" />
+    <link rel="stylesheet" href="src/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="/src/styles/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="/"
+            ><span class="brand-text">Syndicate</span></a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarContent"
+            aria-controls="navbarContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a class="nav-link" href="/">Beranda</a></li>
+              <li class="nav-item">
+                <a class="nav-link" href="/joki-game.html">Joki Game</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/akun-game.html">Akun Game</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="/transaksi.html"
+                  >Transaksi</a
+                >
+              </li>
+            </ul>
+            <button
+              class="btn btn-login"
+              data-bs-toggle="modal"
+              data-bs-target="#loginModal"
+            >
+              Login
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- Header Section -->
+      <section class="page-header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 text-center mt-4" data-aos="fade-up">
+              <span class="section-tag">Transaksi</span>
+              <h1>Cari Transaksi</h1>
+              <p class="lead">Cari riwayat transaksi Anda dengan mudah</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Transaction Listing -->
+      <section class="transaction-listing py-5">
+        <div class="container">
+          <!-- Search Bar -->
+          <div class="search-sort-bar mb-4" data-aos="fade-up">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="position-relative">
+                  <input
+                    type="text"
+                    id="searchTransaction"
+                    class="form-control"
+                    placeholder="Cari transaksi..."
+                  />
+                  <i
+                    class="bi bi-search position-absolute top-50 end-0 translate-middle-y me-3"
+                  ></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Dummy Data: Transaction History Table -->
+          <div class="table-responsive" data-aos="fade-up">
+            <table class="table table-striped transaction-table">
+              <thead>
+                <tr>
+                  <th>Transaction ID</th>
+                  <th>Date</th>
+                  <th>Service</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="transactionTable">
+                <tr>
+                  <td>#TXN001</td>
+                  <td>2023-03-01</td>
+                  <td>Mobile Legends Boost</td>
+                  <td>Rp 1,200,000</td>
+                  <td><span class="badge bg-success">Completed</span></td>
+                </tr>
+                <tr>
+                  <td>#TXN002</td>
+                  <td>2023-03-05</td>
+                  <td>Valorant Boost</td>
+                  <td>Rp 2,500,000</td>
+                  <td><span class="badge bg-warning">Pending</span></td>
+                </tr>
+                <tr>
+                  <td>#TXN003</td>
+                  <td>2023-03-10</td>
+                  <td>Genshin Impact Account</td>
+                  <td>Rp 3,000,000</td>
+                  <td><span class="badge bg-danger">Cancelled</span></td>
+                </tr>
+                <tr>
+                  <td>#TXN004</td>
+                  <td>2023-03-12</td>
+                  <td>PUBG Mobile Boost</td>
+                  <td>Rp 1,800,000</td>
+                  <td><span class="badge bg-success">Completed</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="footer-about">
+              <h3 class="footer-brand">Syndicate</h3>
+              <p>
+                Premium gaming services for competitive players. Our mission is
+                to provide top-quality boosting services and premium accounts
+                for gamers worldwide.
+              </p>
+              <div class="social-links">
+                <a href="#" aria-label="Facebook"
+                  ><i class="bi bi-facebook"></i
+                ></a>
+                <a href="#" aria-label="Twitter"
+                  ><i class="bi bi-twitter"></i
+                ></a>
+                <a href="#" aria-label="Instagram"
+                  ><i class="bi bi-instagram"></i
+                ></a>
+                <a href="#" aria-label="Discord"
+                  ><i class="bi bi-discord"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4">
+            <div class="footer-links">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="/">Beranda</a></li>
+                <li><a href="/joki-game.html">Joki Game</a></li>
+                <li><a href="/akun-game.html">Akun Game</a></li>
+                <li><a href="/transaksi.html">Transaksi</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-4">
+            <div class="footer-links">
+              <h4>Games</h4>
+              <ul>
+                <li><a href="/game-detail.html?id=1">Mobile Legends</a></li>
+                <li><a href="/game-detail.html?id=2">Valorant</a></li>
+                <li><a href="/game-detail.html?id=3">Genshin Impact</a></li>
+                <li><a href="/joki-game.html">All Games</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="copyright">
+            <p>&copy; 2023 Syndicate. All Rights Reserved.</p>
+          </div>
+          <div class="footer-bottom-links">
+            <a href="/privacy.html">Privacy Policy</a>
+            <a href="/terms.html">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Login Modal -->
+    <div
+      class="modal fade"
+      id="loginModal"
+      tabindex="-1"
+      aria-labelledby="loginModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="loginModalLabel">Login to Syndicate</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="loginForm">
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Enter your email"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  placeholder="Enter your password"
+                  required
+                />
+              </div>
+              <div class="mb-3 form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="rememberMe"
+                />
+                <label class="form-check-label" for="rememberMe"
+                  >Remember me</label
+                >
+              </div>
+              <button type="submit" class="btn btn-primary w-100">Login</button>
+            </form>
+            <div class="mt-3 text-center">
+              <p>
+                Don't have an account?
+                <a href="#" class="register-link">Register now</a>
+              </p>
+              <a href="#" class="forgot-password">Forgot Password?</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Scripts -->
+    <script src="src/scripts/bootstrap.bundle.min.js"></script>
+    <script src="src/scripts/aos.js"></script>
+    <script src="/src/scripts/main.js"></script>
+    <script>
+      AOS.init({ duration: 800, once: true });
+
+      // Fungsi pencarian transaksi
+      const searchInput = document.getElementById("searchTransaction");
+      const transactionTable = document.getElementById("transactionTable");
+
+      searchInput.addEventListener("input", function () {
+        const query = this.value.toLowerCase();
+        const rows = transactionTable.getElementsByTagName("tr");
+
+        Array.from(rows).forEach((row) => {
+          const cellsText = row.textContent.toLowerCase();
+          row.style.display = cellsText.indexOf(query) > -1 ? "" : "none";
+        });
+      });
+    </script>
+  </body>
+</html>

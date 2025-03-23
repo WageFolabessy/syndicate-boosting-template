@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Syndicate - Joki Game</title>
+    <meta
+      name="description"
+      content="Professional game boosting services for competitive players. Boost your rank, complete achievements, and improve your gaming skills with Syndicate."
+    />
+    <meta
+      name="keywords"
+      content="game boosting, joki game, professional gaming services, rank boost, achievement unlocking"
+    />
+    <meta name="author" content="Syndicate" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta
+      property="og:title"
+      content="Professional Game Boosting Services - Syndicate"
+    />
+    <meta
+      property="og:description"
+      content="Boost your rank, complete achievements, and improve your gaming skills with our professional boosting services."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://syndicate-gaming.com/joki-game" />
+    <meta property="og:image" content="/images/og-image.jpg" />
+
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="src/styles/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/src/styles/main.css" />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="/">
+            <span class="brand-text">Syndicate</span>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarContent"
+            aria-controls="navbarContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="/">Beranda</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="/joki-game.html"
+                  >Joki Game</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/akun-game.html">Akun Game</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/transaksi.html">Transaksi</a>
+              </li>
+            </ul>
+            <button
+              class="btn btn-login"
+              data-bs-toggle="modal"
+              data-bs-target="#loginModal"
+            >
+              Login
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Header Section -->
+      <section class="page-header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 text-center mt-4" data-aos="fade-up">
+              <span class="section-tag">Professional Services</span>
+              <h1>Game Boosting Services</h1>
+              <p class="lead">
+                Boost your rank, complete achievements, and improve your skills
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Game Listing -->
+      <section class="game-listing">
+        <div class="container">
+          <!-- Search & Sort Bar -->
+          <div class="search-sort-bar mb-4" data-aos="fade-up">
+            <div class="row align-items-center">
+              <div class="col-md-12">
+                <div class="position-relative">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Cari jasa joki..."
+                  />
+                  <i
+                    class="bi bi-search position-absolute top-50 end-0 translate-middle-y me-3"
+                  ></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row row-cols-1 row-cols-md-3 g-4 game-cards">
+            <div
+              class="col-lg-4 col-md-6 game-item moba"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <a href="/game-detail.html?id=1" class="card game-card">
+                <div class="card-image">
+                  <img
+                    src="/images/ml2.jpg"
+                    alt="Mobile Legends"
+                    class="card-img-top"
+                  />
+                  <div class="card-badge">Best Seller</div>
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title">Mobile Legends</h3>
+                  <div class="game-meta">
+                    <span><i class="bi bi-controller"></i> MOBA</span>
+                    <span
+                      ><i class="bi bi-star-fill"></i> 4.9 (120 Reviews)</span
+                    >
+                  </div>
+                  <p class="card-text">
+                    Rank boosting from Warrior to Mythical Glory, custom medal
+                    achievement, professional coaching
+                  </p>
+                  <div class="card-meta">
+                    <span class="price">Mulai dari Rp 50.000</span>
+                    <button class="btn btn-sm btn-primary">
+                      View Packages
+                    </button>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div
+              class="col-lg-4 col-md-6 game-item moba"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <a href="/game-detail.html?id=4" class="card game-card">
+                <div class="card-image">
+                  <img src="/images/valorant.webp" alt="Dota 2" class="card-img-top" />
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title">Valorant</h3>
+                  <div class="game-meta">
+                    <span><i class="bi bi-controller"></i> MOBA</span>
+                    <span
+                      ><i class="bi bi-star-fill"></i> 4.8 (95 Reviews)</span
+                    >
+                  </div>
+                  <p class="card-text">
+                    MMR boosting, calibration matches, behavior score
+                    improvement, professional coaching
+                  </p>
+                  <div class="card-meta">
+                    <span class="price">Mulai dari Rp 120.000</span>
+                    <button class="btn btn-sm btn-primary">
+                      View Packages
+                    </button>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div
+              class="col-lg-4 col-md-6 game-item moba"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <a href="/game-detail.html?id=5" class="card game-card">
+                <div class="card-image">
+                  <img
+                    src="/images/pb.jpg"
+                    alt="League of Legends"
+                    class="card-img-top"
+                  />
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title">Point Blank</h3>
+                  <div class="game-meta">
+                    <span><i class="bi bi-controller"></i> MOBA</span>
+                    <span
+                      ><i class="bi bi-star-fill"></i> 4.7 (88 Reviews)</span
+                    >
+                  </div>
+                  <p class="card-text">
+                    Rank boosting from Iron to Challenger, placements, champion
+                    mastery, coaching
+                  </p>
+                  <div class="card-meta">
+                    <span class="price">Mulai dari Rp 150.000</span>
+                    <button class="btn btn-sm btn-primary">
+                      View Packages
+                    </button>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div
+              class="col-lg-4 col-md-6 game-item moba"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <a href="/game-detail.html?id=5" class="card game-card">
+                <div class="card-image">
+                  <img
+                    src="/images/apex-legend.jpg"
+                    alt="League of Legends"
+                    class="card-img-top"
+                  />
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title">Apex Legend</h3>
+                  <div class="game-meta">
+                    <span><i class="bi bi-controller"></i> MOBA</span>
+                    <span
+                      ><i class="bi bi-star-fill"></i> 4.7 (88 Reviews)</span
+                    >
+                  </div>
+                  <p class="card-text">
+                    Rank boosting from Iron to Challenger, placements, champion
+                    mastery, coaching
+                  </p>
+                  <div class="card-meta">
+                    <span class="price">Mulai dari Rp 150.000</span>
+                    <button class="btn btn-sm btn-primary">
+                      View Packages
+                    </button>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div
+              class="col-lg-4 col-md-6 game-item moba"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <a href="/game-detail.html?id=5" class="card game-card">
+                <div class="card-image">
+                  <img
+                    src="/images/so.webp"
+                    alt="Seal Online"
+                    class="card-img-top"
+                  />
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title">Seal Online</h3>
+                  <div class="game-meta">
+                    <span><i class="bi bi-controller"></i> MOBA</span>
+                    <span
+                      ><i class="bi bi-star-fill"></i> 4.7 (88 Reviews)</span
+                    >
+                  </div>
+                  <p class="card-text">
+                    Rank boosting from Iron to Challenger, placements, champion
+                    mastery, coaching
+                  </p>
+                  <div class="card-meta">
+                    <span class="price">Mulai dari Rp 150.000</span>
+                    <button class="btn btn-sm btn-primary">
+                      View Packages
+                    </button>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- How It Works Section -->
+      <section class="how-it-works">
+        <div class="container">
+          <div class="section-header text-center" data-aos="fade-up">
+            <span class="section-tag">Process</span>
+            <h2>How Our Boosting Service Works</h2>
+            <p>
+              Simple, secure, and effective process to elevate your gaming
+              experience
+            </p>
+          </div>
+
+          <div class="row steps">
+            <!-- Step 1 -->
+            <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
+              <div class="step-item">
+                <div class="step-number">1</div>
+                <div class="step-icon">
+                  <i class="bi bi-cart"></i>
+                </div>
+                <h3>Choose Your Service</h3>
+                <p>
+                  Select the game and boosting package that meets your
+                  requirements
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+              <div class="step-item">
+                <div class="step-number">2</div>
+                <div class="step-icon">
+                  <i class="bi bi-credit-card"></i>
+                </div>
+                <h3>Make Payment</h3>
+                <p>
+                  Complete your purchase securely using our trusted payment
+                  methods
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
+              <div class="step-item">
+                <div class="step-number">3</div>
+                <div class="step-icon">
+                  <i class="bi bi-person-check"></i>
+                </div>
+                <h3>Pro Booster Assignment</h3>
+                <p>
+                  A professional booster is assigned to your order based on
+                  expertise
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="col-md-3" data-aos="fade-up" data-aos-delay="400">
+              <div class="step-item">
+                <div class="step-number">4</div>
+                <div class="step-icon">
+                  <i class="bi bi-check-circle"></i>
+                </div>
+                <h3>Order Completion</h3>
+                <p>
+                  Track progress in real-time and receive notification upon
+                  completion
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="faq-section">
+        <div class="container">
+          <div class="section-header text-center" data-aos="fade-up">
+            <span class="section-tag">Questions</span>
+            <h2>Frequently Asked Questions</h2>
+            <p>Find answers to common questions about our boosting services</p>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-8 offset-lg-2" data-aos="fade-up">
+              <div class="accordion" id="faqAccordion">
+                <!-- FAQ Item 1 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseOne"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
+                    >
+                      Is my account safe during the boosting process?
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseOne"
+                    class="accordion-collapse collapse show"
+                    aria-labelledby="headingOne"
+                    data-bs-parent="#faqAccordion"
+                  >
+                    <div class="accordion-body">
+                      <p>
+                        Yes, your account security is our top priority. All our
+                        boosters are verified professionals who follow strict
+                        security protocols. We use secure VPNs matching your
+                        location to prevent any suspicious activity flags.
+                        Additionally, we never ask for unnecessary information
+                        beyond what's required for the boosting service.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="collapseTwo"
+                    >
+                      How long will my boosting order take to complete?
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseTwo"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingTwo"
+                    data-bs-parent="#faqAccordion"
+                  >
+                    <div class="accordion-body">
+                      <p>
+                        The completion time depends on the type of service and
+                        the extent of boosting required. Most rank boosting
+                        services take between 1-7 days, depending on the
+                        starting rank and target rank. Placement matches
+                        typically take 1-2 days. For specific timeframes, you
+                        can check the estimated completion time displayed on
+                        each service page or contact our customer support for
+                        more details.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseThree"
+                      aria-expanded="false"
+                      aria-controls="collapseThree"
+                    >
+                      Can I play on my account during the boosting process?
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseThree"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingThree"
+                    data-bs-parent="#faqAccordion"
+                  >
+                    <div class="accordion-body">
+                      <p>
+                        We recommend not playing on your account while the
+                        boosting is in progress to avoid conflicts and ensure
+                        efficient service. However, if you need to play, you can
+                        use our "Pause Boost" feature from your dashboard to
+                        temporarily halt the service. Just notify us at least 1
+                        hour in advance before you want to play, and you can
+                        resume the service when you're done.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingFour">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseFour"
+                      aria-expanded="false"
+                      aria-controls="collapseFour"
+                    >
+                      What payment methods do you accept?
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseFour"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingFour"
+                    data-bs-parent="#faqAccordion"
+                  >
+                    <div class="accordion-body">
+                      <p>
+                        We accept a wide range of payment methods including
+                        credit/debit cards (Visa, Mastercard, American Express),
+                        PayPal, bank transfers, OVO, GoPay, Dana, and various
+                        cryptocurrency options (Bitcoin, Ethereum, USDT). All
+                        transactions are secure and encrypted.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingFive">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseFive"
+                      aria-expanded="false"
+                      aria-controls="collapseFive"
+                    >
+                      Is there a refund policy if I'm not satisfied?
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseFive"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingFive"
+                    data-bs-parent="#faqAccordion"
+                  >
+                    <div class="accordion-body">
+                      <p>
+                        Yes, we offer a money-back guarantee if you're not
+                        satisfied with our service. If we fail to deliver the
+                        agreed service or if there are legitimate issues with
+                        the quality of our work, you can request a refund within
+                        48 hours of order completion. Each case is reviewed
+                        individually by our customer support team.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="footer-about">
+              <h3 class="footer-brand">Syndicate</h3>
+              <p>
+                Premium gaming services for competitive players. Our mission is
+                to provide top-quality boosting services and premium accounts
+                for gamers worldwide.
+              </p>
+              <div class="social-links">
+                <a href="#" aria-label="Facebook"
+                  ><i class="bi bi-facebook"></i
+                ></a>
+                <a href="#" aria-label="Twitter"
+                  ><i class="bi bi-twitter"></i
+                ></a>
+                <a href="#" aria-label="Instagram"
+                  ><i class="bi bi-instagram"></i
+                ></a>
+                <a href="#" aria-label="Discord"
+                  ><i class="bi bi-discord"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4">
+            <div class="footer-links">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="/">Beranda</a></li>
+                <li><a href="/joki-game.html">Joki Game</a></li>
+                <li><a href="/akun-game.html">Akun Game</a></li>
+                <li><a href="/transaksi.html">Transaksi</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-4">
+            <div class="footer-links">
+              <h4>Games</h4>
+              <ul>
+                <li><a href="/game-detail.html?id=1">Mobile Legends</a></li>
+                <li><a href="/game-detail.html?id=2">Valorant</a></li>
+                <li><a href="/game-detail.html?id=3">Genshin Impact</a></li>
+                <li><a href="/joki-game.html">All Games</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="copyright">
+            <p>&copy; 2023 Syndicate. All Rights Reserved.</p>
+          </div>
+          <div class="footer-bottom-links">
+            <a href="/privacy.html">Privacy Policy</a>
+            <a href="/terms.html">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div
+      class="modal fade"
+      id="loginModal"
+      tabindex="-1"
+      aria-labelledby="loginModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="loginModalLabel">Login to Syndicate</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="loginForm">
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Enter your email"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  placeholder="Enter your password"
+                  required
+                />
+              </div>
+              <div class="mb-3 form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="rememberMe"
+                />
+                <label class="form-check-label" for="rememberMe"
+                  >Remember me</label
+                >
+              </div>
+              <button type="submit" class="btn btn-primary w-100">Login</button>
+            </form>
+            <div class="mt-3 text-center">
+              <p>
+                Don't have an account?
+                <a href="#" class="register-link">Register now</a>
+              </p>
+              <a href="#" class="forgot-password">Forgot Password?</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="src/scripts/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS Animation Library -->
+    <script src="src/scripts/aos.js"></script>
+
+    <!-- Custom JS -->
+    <script src="/src/scripts/main.js"></script>
+  </body>
+</html>

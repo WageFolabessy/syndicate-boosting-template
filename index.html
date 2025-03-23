@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Syndicate</title>
+    <meta
+      name="description"
+      content="Syndicate offers professional game boosting services and premium game accounts for serious players. Elevate your gaming experience today."
+    />
+    <meta
+      name="keywords"
+      content="game boosting, joki game, akun game, game accounts, professional gaming services"
+    />
+    <meta name="author" content="Syndicate" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta
+      property="og:title"
+      content="Syndicate - Premium Game Boosting & Accounts"
+    />
+    <meta
+      property="og:description"
+      content="Professional game boosting services and premium game accounts for serious players."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://syndicate-gaming.com" />
+    <meta property="og:image" content="/images/logo.png" />
+
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="src/styles/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/src/styles/main.css" />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/images/logo.png" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="/">
+            <span class="brand-text">Syndicate</span>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarContent"
+            aria-controls="navbarContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/"
+                  >Beranda</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/joki-game.html">Joki Game</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/akun-game.html">Akun Game</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/transaksi.html">Transaksi</a>
+              </li>
+            </ul>
+            <button
+              class="btn btn-login"
+              data-bs-toggle="modal"
+              data-bs-target="#loginModal"
+            >
+              Login
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <div class="hero-content" data-aos="fade-up">
+                <span class="subtitle">Premium Gaming Services</span>
+                <h1>Elevate Your Gaming Experience</h1>
+                <p>
+                  Professional game boosting services and premium accounts for
+                  serious players.
+                </p>
+                <div class="hero-buttons">
+                  <a href="/joki-game.html" class="btn btn-primary"
+                    >Joki Game</a
+                  >
+                  <a href="/akun-game.html" class="btn btn-outline"
+                    >Akun Game</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="hero-image" data-aos="fade-left">
+                <img
+                  src="/images/logo.png"
+                  alt="Gaming setup with premium gaming experience"
+                  class="img-fluid w-100"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Games Section -->
+      <section class="featured-section">
+        <div class="container">
+          <div class="section-header text-center" data-aos="fade-up">
+            <span class="section-tag">Featured Services</span>
+            <h2>Popular Game Boosting</h2>
+            <p>
+              Professional boosting services for the most popular competitive
+              games
+            </p>
+          </div>
+
+          <div class="row game-cards">
+            <!-- Game Card 1 -->
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+              <a href="/game-detail.html?id=1" class="card game-card">
+                <div class="card-image">
+                  <img
+                    src="/images/ml.jpg"
+                    alt="Mobile Legends"
+                    class="img-thumbnail card-img-top"
+                  />
+                  <div class="relative card-badge z-3">Trending</div>
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title">Mobile Legends</h3>
+                  <p class="card-text">
+                    Rank boosting, medal achievement & professional coaching
+                  </p>
+                  <div class="card-meta">
+                    <span class="price">Mulai dari Rp 50.000</span>
+                    <span class="rating"
+                      ><i class="bi bi-star-fill"></i> 4.9</span
+                    >
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <!-- Game Card 2 -->
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+              <a href="/game-detail.html?id=2" class="card game-card">
+                <div class="card-image">
+                  <img
+                    src="/images/valorant.webp"
+                    alt="Valorant"
+                    class="card-img-top"
+                  />
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title">Valorant</h3>
+                  <p class="card-text">
+                    Rank boosting, account placement & competitive coaching
+                  </p>
+                  <div class="card-meta">
+                    <span class="price">Mulai dari Rp 100.000</span>
+                    <span class="rating"
+                      ><i class="bi bi-star-fill"></i> 4.8</span
+                    >
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <!-- Game Card 3 -->
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+              <a href="/game-detail.html?id=3" class="card game-card">
+                <div class="card-image">
+                  <img
+                    src="/images/apex-legend.jpg"
+                    alt="Genshin Impact"
+                    class="card-img-top"
+                  />
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title">Apex Legend</h3>
+                  <p class="card-text">
+                    Domain clears, boss fights, gear farming & account building
+                  </p>
+                  <div class="card-meta">
+                    <span class="price">Mulai dari Rp 75.000</span>
+                    <span class="rating"
+                      ><i class="bi bi-star-fill"></i> 4.9</span
+                    >
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="text-center mt-5" data-aos="fade-up">
+            <a href="/joki-game.html" class="btn btn-outline-dark"
+              >View All Games</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Premium Accounts Section -->
+      <section class="accounts-section">
+        <div class="container">
+          <div class="section-header text-center" data-aos="fade-up">
+            <span class="section-tag">Premium Accounts</span>
+            <h2>Featured Game Accounts</h2>
+            <p>
+              Pre-built accounts with rare items, high ranks, and exclusive
+              content
+            </p>
+          </div>
+
+          <div class="row account-cards">
+            <!-- Account Card 1 -->
+            <div
+              class="col-md-6 col-lg-3"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="card account-card">
+                <div class="card-image">
+                  <img
+                    src="/images/ml.jpg"
+                    alt="Mobile Legends Mythic Account"
+                    class="card-img-top"
+                  />
+                  <div class="card-badge verified">Verified</div>
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title">Mobile Legends</h3>
+                  <p class="card-subtitle">Mythical Glory</p>
+                  <ul class="account-features">
+                    <li>
+                      <i class="bi bi-check-circle"></i> 80+ Heroes Unlocked
+                    </li>
+                    <li>
+                      <i class="bi bi-check-circle"></i> 50+ Epic & Special
+                      Skins
+                    </li>
+                    <li>
+                      <i class="bi bi-check-circle"></i> Emblem Sets Max Level
+                    </li>
+                  </ul>
+                  <div class="account-price">
+                    <span class="current-price">Rp 3.200.000</span>
+                    <a
+                      href="/account-detail.html?id=1"
+                      class="btn btn-sm btn-view"
+                      >View Details</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Account Card 2 -->
+            <div
+              class="col-md-6 col-lg-3"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="card account-card">
+                <div class="card-image">
+                  <img
+                    src="/images/valorant.webp"
+                    alt="Valorant Radiant Account"
+                    class="card-img-top"
+                  />
+                  <div class="card-badge verified">Verified</div>
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title">Valorant</h3>
+                  <p class="card-subtitle">Radiant Rank</p>
+                  <ul class="account-features">
+                    <li>
+                      <i class="bi bi-check-circle"></i> All Agents Unlocked
+                    </li>
+                    <li>
+                      <i class="bi bi-check-circle"></i> Premium Skin
+                      Collections
+                    </li>
+                    <li>
+                      <i class="bi bi-check-circle"></i> Battle Pass Complete
+                    </li>
+                  </ul>
+                  <div class="account-price">
+                    <span class="current-price">Rp 5.000.000</span>
+                    <a
+                      href="/account-detail.html?id=2"
+                      class="btn btn-sm btn-view"
+                      >View Details</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Account Card 3 -->
+            <div
+              class="col-md-6 col-lg-3"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="card account-card">
+                <div class="card-image">
+                  <img
+                    src="/images/apex-legend.jpg"
+                    alt="Genshin Impact AR60 Account"
+                    class="card-img-top"
+                  />
+                  <div class="card-badge verified">Verified</div>
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title">Apex Legend</h3>
+                  <p class="card-subtitle">AR 60 Whale Account</p>
+                  <ul class="account-features">
+                    <li>
+                      <i class="bi bi-check-circle"></i> 30+ 5★ Characters
+                    </li>
+                    <li>
+                      <i class="bi bi-check-circle"></i> 15+ 5★ Weapons (R5)
+                    </li>
+                    <li>
+                      <i class="bi bi-check-circle"></i> All Areas 100% Complete
+                    </li>
+                  </ul>
+                  <div class="account-price">
+                    <span class="current-price">Rp 8.500.000</span>
+                    <a
+                      href="/account-detail.html?id=3"
+                      class="btn btn-sm btn-view"
+                      >View Details</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Account Card 4 -->
+            <div
+              class="col-md-6 col-lg-3"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <div class="card account-card">
+                <div class="card-image">
+                  <img
+                    src="/images/pb.jpg"
+                    alt="PUBG Conqueror Account"
+                    class="card-img-top"
+                  />
+                  <div class="card-badge verified">Verified</div>
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title">Point Blank</h3>
+                  <p class="card-subtitle">Conqueror Account</p>
+                  <ul class="account-features">
+                    <li>
+                      <i class="bi bi-check-circle"></i> 200+ Rare Outfits
+                    </li>
+                    <li>
+                      <i class="bi bi-check-circle"></i> Mythic & Legendary Gun
+                      Skins
+                    </li>
+                    <li>
+                      <i class="bi bi-check-circle"></i> Season 1-20 RP Rewards
+                    </li>
+                  </ul>
+                  <div class="account-price">
+                    <span class="current-price">Rp 4.800.000</span>
+                    <a
+                      href="/account-detail.html?id=4"
+                      class="btn btn-sm btn-view"
+                      >View Details</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center mt-5" data-aos="fade-up">
+            <a href="/akun-game.html" class="btn btn-outline-dark"
+              >View All Accounts</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Choose Us Section -->
+      <section class="why-us-section">
+        <div class="container">
+          <div class="section-header text-center" data-aos="fade-up">
+            <span class="section-tag">Why Choose Us</span>
+            <h2>The Syndicate Advantage</h2>
+            <p>
+              We deliver premium gaming services with a focus on quality,
+              security, and customer satisfaction
+            </p>
+          </div>
+
+          <div class="row features">
+            <!-- Feature 1 -->
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <i class="bi bi-shield-check"></i>
+                </div>
+                <h3>Secure & Trusted</h3>
+                <p>
+                  All transactions are encrypted and secure. We protect your
+                  data and gaming accounts with industry-standard measures.
+                </p>
+              </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <i class="bi bi-trophy"></i>
+                </div>
+                <h3>Professional Boosters</h3>
+                <p>
+                  Our boosting team consists of professional players with proven
+                  track records in competitive gaming.
+                </p>
+              </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <i class="bi bi-headset"></i>
+                </div>
+                <h3>24/7 Support</h3>
+                <p>
+                  Our customer support team is available around the clock to
+                  assist with any questions or concerns.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="footer-about">
+              <h3 class="footer-brand">Syndicate</h3>
+              <p>
+                Premium gaming services for competitive players. Our mission is
+                to provide top-quality boosting services and premium accounts
+                for gamers worldwide.
+              </p>
+              <div class="social-links">
+                <a href="#" aria-label="Facebook"
+                  ><i class="bi bi-facebook"></i
+                ></a>
+                <a href="#" aria-label="Twitter"
+                  ><i class="bi bi-twitter"></i
+                ></a>
+                <a href="#" aria-label="Instagram"
+                  ><i class="bi bi-instagram"></i
+                ></a>
+                <a href="#" aria-label="Discord"
+                  ><i class="bi bi-discord"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4">
+            <div class="footer-links">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="/">Beranda</a></li>
+                <li><a href="/joki-game.html">Joki Game</a></li>
+                <li><a href="/akun-game.html">Akun Game</a></li>
+                <li><a href="/transaksi.html">Transaksi</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-4">
+            <div class="footer-links">
+              <h4>Games</h4>
+              <ul>
+                <li><a href="/game-detail.html?id=1">Mobile Legends</a></li>
+                <li><a href="/game-detail.html?id=2">Valorant</a></li>
+                <li><a href="/game-detail.html?id=3">Genshin Impact</a></li>
+                <li><a href="/joki-game.html">All Games</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="copyright">
+            <p>&copy; 2023 Syndicate. All Rights Reserved.</p>
+          </div>
+          <div class="footer-bottom-links">
+            <a href="/privacy.html">Privacy Policy</a>
+            <a href="/terms.html">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div
+      class="modal fade"
+      id="loginModal"
+      tabindex="-1"
+      aria-labelledby="loginModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="loginModalLabel">Login to Syndicate</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="loginForm">
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Enter your email"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  placeholder="Enter your password"
+                  required
+                />
+              </div>
+              <div class="mb-3 form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="rememberMe"
+                />
+                <label class="form-check-label" for="rememberMe"
+                  >Remember me</label
+                >
+              </div>
+              <button type="submit" class="btn btn-primary w-100">Login</button>
+            </form>
+            <div class="mt-3 text-center">
+              <p>
+                Don't have an account?
+                <a href="#" class="register-link">Register now</a>
+              </p>
+              <a href="#" class="forgot-password">Forgot Password?</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="src/scripts/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS Animation Library -->
+    <script src="src/scripts/aos.js"></script>
+
+    <!-- Custom JS -->
+    <script src="/src/scripts/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+/* Tampilan Umum */
+.account-categories {
+  padding: 40px 0;
+  background-color: #fff;
+}
+.btn-filter.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Style untuk kartu akun */
+.premium-account-card {
+  background: #fff;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+.premium-account-card:hover {
+  transform: translateY(-5px);
+}
+.account-images img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #eee;
+}
+.account-badges {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.account-details {
+  padding: 15px;
+}
+.price-tag .current-price {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #28a745;
+}
+.price-tag .original-price {
+  text-decoration: line-through;
+  color: #6c757d;
+  margin-left: 10px;
+}
+
+/* Footer */
+footer {
+  background-color: #343a40;
+  color: #fff;
+  padding: 40px 0;
+}
+.footer a {
+  color: #adb5bd;
+  text-decoration: none;
+}
+.footer a:hover {
+  color: #fff;
+}
+.footer-bottom {
+  border-top: 1px solid #495057;
+  padding-top: 20px;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
