@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Syndicate - Rank Boost Apex Legend</title>
+    <meta
+      name="description"
+      content="Tentukan Current Rank dan Desired Rank untuk layanan Rank Boost Apex Legend. Pilih rank melalui gambar, kemudian pilih subdivisi (IV, III, II, I) atau input target RP untuk rank Master, serta lengkapi data tambahan seperti server dan platform."
+    />
+    <meta
+      name="keywords"
+      content="Apex Legend, Rank Boost, joki game, boosting, current rank, desired rank"
+    />
+    <meta name="author" content="Syndicate" />
+    <meta property="og:title" content="Rank Boost - Apex Legend | Syndicate" />
+    <meta
+      property="og:description"
+      content="Pilih Current Rank dan Desired Rank dengan gambar untuk layanan boosting Apex Legend."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://syndicate-gaming.com/apex-legend/rank-boost.html"
+    />
+    <meta property="og:image" content="/images/og-image.jpg" />
+    <link rel="stylesheet" href="/src/styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="/src/styles/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #f8f9fa;
+      }
+      .rank-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+      }
+      .rank-grid .rank-item {
+        cursor: pointer;
+        border: 2px solid transparent;
+        border-radius: 5px;
+        transition: border-color 0.3s;
+        width: 100px;
+        text-align: center;
+        position: relative;
+      }
+      .rank-grid .rank-item:hover {
+        border-color: #0d6efd;
+      }
+      .rank-grid .rank-item img {
+        width: 100%;
+        height: 80px;
+        object-fit: contain;
+        display: block;
+      }
+      .rank-grid .rank-item .rank-name {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s;
+        border-radius: 5px;
+        font-weight: 600;
+        font-size: 0.9rem;
+      }
+      .rank-grid .rank-item:hover .rank-name {
+        opacity: 1;
+      }
+      .rank-grid .rank-item.selected {
+        border-color: #0d6efd;
+      }
+      .legend-rank {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 15px;
+      }
+      .legend-rank img {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+      }
+      .subdivision-options {
+        margin-top: 15px;
+        text-align: center;
+      }
+      .subdivision-options label {
+        margin: 0 5px;
+        cursor: pointer;
+      }
+      .subdivision-options input[type="radio"] {
+        display: none;
+      }
+      .subdivision-options label.btn-outline-primary {
+        min-width: 50px;
+      }
+      .rp-option {
+        margin-top: 15px;
+        text-align: center;
+      }
+      .card-custom {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+      }
+      @media (min-width: 992px) {
+        .checkout {
+          margin-top: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="/">
+            <span class="brand-text">Syndicate</span>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarContent"
+            aria-controls="navbarContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="/">Beranda</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/joki-game.html">Joki Game</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/akun-game.html">Akun Game</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/transaksi.html">Transaksi</a>
+              </li>
+            </ul>
+            <button
+              class="btn btn-login"
+              data-bs-toggle="modal"
+              data-bs-target="#loginModal"
+            >
+              Login
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <section class="page-header pt-5 mt-5" data-aos="fade-up">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 text-center">
+              <span class="section-tag">Apex Legend</span>
+              <h1>Pilih Opsi Rank Boost</h1>
+              <p class="lead">
+                Pilih Rank yang diinginkan dan akan kami jokikan.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="rank-boost py-5">
+        <div class="container">
+          <div class="row g-4">
+            <!-- Form Section -->
+            <div class="col-lg-8">
+              <form>
+                <!-- Card untuk Rank Saat Ini -->
+                <div class="card card-custom" data-aos="fade-up">
+                  <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">Rank Saat Ini</h5>
+                  </div>
+                  <div class="card-body">
+                    <div class="legend-rank" id="current-legend">
+                      <img
+                        src="/images/apex-legends/rookie.webp"
+                        alt="Selected Current Rank"
+                        id="current-selected-img"
+                      />
+                      <h4 id="current-selected-text">Rank saat ini: Rookie</h4>
+                    </div>
+                    <div class="rank-grid" id="current-rank-grid">
+                      <div
+                        class="rank-item selected"
+                        data-rank="rookie"
+                        onclick='selectRank("current",this)'
+                      >
+                        <img
+                          src="/images/apex-legends/rookie.webp"
+                          alt="Rookie"
+                        />
+                        <div class="rank-name">Rookie</div>
+                      </div>
+                      <div
+                        class="rank-item"
+                        data-rank="bronze"
+                        onclick='selectRank("current",this)'
+                      >
+                        <img
+                          src="/images/apex-legends/bronze.webp"
+                          alt="Bronze"
+                        />
+                        <div class="rank-name">Bronze</div>
+                      </div>
+                      <div
+                        class="rank-item"
+                        data-rank="silver"
+                        onclick='selectRank("current",this)'
+                      >
+                        <img
+                          src="/images/apex-legends/silver.webp"
+                          alt="Silver"
+                        />
+                        <div class="rank-name">Silver</div>
+                      </div>
+                      <div
+                        class="rank-item"
+                        data-rank="gold"
+                        onclick='selectRank("current",this)'
+                      >
+                        <img src="/images/apex-legends/gold.webp" alt="Gold" />
+                        <div class="rank-name">Gold</div>
+                      </div>
+                      <div
+                        class="rank-item"
+                        data-rank="platinum"
+                        onclick='selectRank("current",this)'
+                      >
+                        <img
+                          src="/images/apex-legends/platinum.webp"
+                          alt="Platinum"
+                        />
+                        <div class="rank-name">Platinum</div>
+                      </div>
+                      <div
+                        class="rank-item"
+                        data-rank="diamond"
+                        onclick='selectRank("current",this)'
+                      >
+                        <img
+                          src="/images/apex-legends/diamond.webp"
+                          alt="Diamond"
+                        />
+                        <div class="rank-name">Diamond</div>
+                      </div>
+                      <div
+                        class="rank-item"
+                        data-rank="master"
+                        onclick='selectRank("current",this)'
+                      >
+                        <img
+                          src="/images/apex-legends/master.webp"
+                          alt="Master"
+                        />
+                        <div class="rank-name">Master</div>
+                      </div>
+                    </div>
+                    <div id="current-options" class="mt-3">
+                      <div
+                        id="current-subdivisions"
+                        class="subdivision-options"
+                      >
+                        <input
+                          type="radio"
+                          class="btn-check"
+                          name="current-subdivision"
+                          id="current-subdiv-IV"
+                          value="IV"
+                          checked="checked"
+                        />
+                        <label
+                          class="btn btn-outline-primary"
+                          for="current-subdiv-IV"
+                          >IV</label
+                        >
+                        <input
+                          type="radio"
+                          class="btn-check"
+                          name="current-subdivision"
+                          id="current-subdiv-III"
+                          value="III"
+                        />
+                        <label
+                          class="btn btn-outline-primary"
+                          for="current-subdiv-III"
+                          >III</label
+                        >
+                        <input
+                          type="radio"
+                          class="btn-check"
+                          name="current-subdivision"
+                          id="current-subdiv-II"
+                          value="II"
+                        />
+                        <label
+                          class="btn btn-outline-primary"
+                          for="current-subdiv-II"
+                          >II</label
+                        >
+                        <input
+                          type="radio"
+                          class="btn-check"
+                          name="current-subdivision"
+                          id="current-subdiv-I"
+                          value="I"
+                        />
+                        <label
+                          class="btn btn-outline-primary"
+                          for="current-subdiv-I"
+                          >I</label
+                        >
+                      </div>
+                      <div id="current-rp-dropdown" class="rp-option mt-3">
+                        <label for="current-rp" class="form-label"
+                          >RP saat ini</label
+                        >
+                        <select
+                          id="current-rp"
+                          name="current-rp"
+                          class="form-select"
+                        ></select>
+                      </div>
+                      <div
+                        id="current-rp-input"
+                        class="rp-option mt-3"
+                        style="display: none"
+                      >
+                        <label for="current-rp-master" class="form-label"
+                          >RP saat ini (Input)</label
+                        >
+                        <input
+                          type="number"
+                          id="current-rp-master"
+                          name="current-rp-master"
+                          class="form-control"
+                          placeholder="Masukkan RP saat ini"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card untuk Rank yang Diinginkan -->
+                <div
+                  class="card card-custom"
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                >
+                  <div class="card-header bg-success text-white">
+                    <h5 class="mb-0">Rank yang Diinginkan</h5>
+                  </div>
+                  <div class="card-body">
+                    <div class="legend-rank" id="desired-legend">
+                      <img
+                        src="/images/apex-legends/rookie.webp"
+                        alt="Selected Desired Rank"
+                        id="desired-selected-img"
+                      />
+                      <h4 id="desired-selected-text">
+                        Rank yang diinginkan: Rookie
+                      </h4>
+                    </div>
+                    <div class="rank-grid" id="desired-rank-grid">
+                      <div
+                        class="rank-item selected"
+                        data-rank="rookie"
+                        onclick='selectRank("desired",this)'
+                      >
+                        <img
+                          src="/images/apex-legends/rookie.webp"
+                          alt="Rookie"
+                        />
+                        <div class="rank-name">Rookie</div>
+                      </div>
+                      <div
+                        class="rank-item"
+                        data-rank="bronze"
+                        onclick='selectRank("desired",this)'
+                      >
+                        <img
+                          src="/images/apex-legends/bronze.webp"
+                          alt="Bronze"
+                        />
+                        <div class="rank-name">Bronze</div>
+                      </div>
+                      <div
+                        class="rank-item"
+                        data-rank="silver"
+                        onclick='selectRank("desired",this)'
+                      >
+                        <img
+                          src="/images/apex-legends/silver.webp"
+                          alt="Silver"
+                        />
+                        <div class="rank-name">Silver</div>
+                      </div>
+                      <div
+                        class="rank-item"
+                        data-rank="gold"
+                        onclick='selectRank("desired",this)'
+                      >
+                        <img src="/images/apex-legends/gold.webp" alt="Gold" />
+                        <div class="rank-name">Gold</div>
+                      </div>
+                      <div
+                        class="rank-item"
+                        data-rank="platinum"
+                        onclick='selectRank("desired",this)'
+                      >
+                        <img
+                          src="/images/apex-legends/platinum.webp"
+                          alt="Platinum"
+                        />
+                        <div class="rank-name">Platinum</div>
+                      </div>
+                      <div
+                        class="rank-item"
+                        data-rank="diamond"
+                        onclick='selectRank("desired",this)'
+                      >
+                        <img
+                          src="/images/apex-legends/diamond.webp"
+                          alt="Diamond"
+                        />
+                        <div class="rank-name">Diamond</div>
+                      </div>
+                      <div
+                        class="rank-item"
+                        data-rank="master"
+                        onclick='selectRank("desired",this)'
+                      >
+                        <img
+                          src="/images/apex-legends/master.webp"
+                          alt="Master"
+                        />
+                        <div class="rank-name">Master</div>
+                      </div>
+                    </div>
+                    <div id="desired-options" class="mt-3">
+                      <div
+                        id="desired-subdivisions"
+                        class="subdivision-options"
+                      >
+                        <input
+                          type="radio"
+                          class="btn-check"
+                          name="desired-subdivision"
+                          id="desired-subdiv-IV"
+                          value="IV"
+                          checked="checked"
+                        />
+                        <label
+                          class="btn btn-outline-primary"
+                          for="desired-subdiv-IV"
+                          >IV</label
+                        >
+                        <input
+                          type="radio"
+                          class="btn-check"
+                          name="desired-subdivision"
+                          id="desired-subdiv-III"
+                          value="III"
+                        />
+                        <label
+                          class="btn btn-outline-primary"
+                          for="desired-subdiv-III"
+                          >III</label
+                        >
+                        <input
+                          type="radio"
+                          class="btn-check"
+                          name="desired-subdivision"
+                          id="desired-subdiv-II"
+                          value="II"
+                        />
+                        <label
+                          class="btn btn-outline-primary"
+                          for="desired-subdiv-II"
+                          >II</label
+                        >
+                        <input
+                          type="radio"
+                          class="btn-check"
+                          name="desired-subdivision"
+                          id="desired-subdiv-I"
+                          value="I"
+                        />
+                        <label
+                          class="btn btn-outline-primary"
+                          for="desired-subdiv-I"
+                          >I</label
+                        >
+                      </div>
+                      <div id="desired-rp-dropdown" class="rp-option mt-3">
+                        <label for="desired-rp" class="form-label"
+                          >RP yang diinginkan</label
+                        >
+                        <select
+                          id="desired-rp"
+                          name="desired-rp"
+                          class="form-select"
+                        ></select>
+                      </div>
+                      <div
+                        id="desired-rp-input"
+                        class="rp-option mt-3"
+                        style="display: none"
+                      >
+                        <label for="desired-rp-master" class="form-label"
+                          >RP yang diinginkan (Input)</label
+                        >
+                        <input
+                          type="number"
+                          id="desired-rp-master"
+                          name="desired-rp-master"
+                          class="form-control"
+                          placeholder="Masukkan RP yang diinginkan"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Data Tambahan -->
+                <div class="row g-3" data-aos="fade-up" data-aos-delay="300">
+                  <div class="col-md-6">
+                    <label for="server" class="form-label">Server</label>
+                    <select id="server" name="server" class="form-select">
+                      <option value="na">North America</option>
+                      <option value="eu">Europe</option>
+                      <option value="asia">Asia</option>
+                      <option value="oceania">Oceania</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="platform" class="form-label">Platform</label>
+                    <select id="platform" name="platform" class="form-select">
+                      <option value="pc">PC</option>
+                    </select>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <!-- Checkout Section -->
+            <div class="col-lg-4">
+              <div class="checkout" data-aos="fade-up" data-aos-delay="500">
+                <h4 class="mb-3">Checkout</h4>
+                <div class="card card-custom">
+                  <div class="card-body">
+                    <p class="mb-2">Ringkasan Pesanan</p>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">
+                        <strong>Rank Saat Ini:</strong>
+                        <span id="checkout-current-rank">Rookie 4</span>
+                      </li>
+                      <li class="list-group-item">
+                        <strong>RP saat ini:</strong>
+                        <span id="checkout-current-rp">0-100 RP</span>
+                      </li>
+                      <li class="list-group-item">
+                        <strong>Rank yang Diinginkan:</strong>
+                        <span id="checkout-desired-rank">Rookie 4</span>
+                      </li>
+                      <li class="list-group-item">
+                        <strong>RP yang diinginkan:</strong>
+                        <span id="checkout-desired-rp">0-100 RP</span>
+                      </li>
+                      <li class="list-group-item">
+                        <strong>Server:</strong>
+                        <span id="checkout-server">North America</span>
+                      </li>
+                      <li class="list-group-item">
+                        <strong>Platform:</strong>
+                        <span id="checkout-platform">PC</span>
+                      </li>
+                      <li
+                        class="list-group-item d-flex justify-content-between align-items-center"
+                      >
+                        <strong>Subtotal</strong>
+                        <span id="checkout-subtotal">Rp. 0</span>
+                      </li>
+                      <li
+                        class="list-group-item d-flex justify-content-between align-items-center"
+                      >
+                        <strong>Total</strong>
+                        <span id="checkout-total">Rp. 0</span>
+                      </li>
+                    </ul>
+                    <button type="button" class="btn btn-success w-100 mt-3">
+                      Lanjut Checkout
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="footer-about">
+              <h3 class="footer-brand">Syndicate</h3>
+              <p>
+                Layanan gaming premium untuk pemain kompetitif. Misi kami adalah
+                menyediakan layanan boosting berkualitas tinggi dan akun premium
+                untuk gamer di seluruh dunia.
+              </p>
+              <div class="social-links">
+                <a href="#" aria-label="Facebook"
+                  ><i class="bi bi-facebook"></i
+                ></a>
+                <a href="#" aria-label="Twitter"
+                  ><i class="bi bi-twitter"></i
+                ></a>
+                <a href="#" aria-label="Instagram"
+                  ><i class="bi bi-instagram"></i
+                ></a>
+                <a href="#" aria-label="Discord"
+                  ><i class="bi bi-discord"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4">
+            <div class="footer-links">
+              <h4>Tautan Cepat</h4>
+              <ul>
+                <li><a href="/">Beranda</a></li>
+                <li><a href="/joki-game.html">Joki Game</a></li>
+                <li><a href="/akun-game.html">Akun Game</a></li>
+                <li><a href="/transaksi.html">Transaksi</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-4">
+            <div class="footer-links">
+              <h4>Game</h4>
+              <ul>
+                <li><a href="/game-detail.html?id=1">Mobile Legends</a></li>
+                <li><a href="/game-detail.html?id=2">Valorant</a></li>
+                <li><a href="/game-detail.html?id=3">Genshin Impact</a></li>
+                <li><a href="/joki-game.html">Semua Game</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom text-center mt-3">
+          <p>&copy; 2025 Syndicate. Semua Hak Dilindungi.</p>
+          <div class="footer-bottom-links">
+            <a href="/privacy.html">Kebijakan Privasi</a>
+            <a href="/terms.html">Syarat Layanan</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/src/scripts/bootstrap.bundle.min.js"></script>
+    <script src="/src/scripts/aos.js"></script>
+    <script>
+      AOS.init();
+
+      // Mapping RP options untuk setiap rank (contoh nilai, sesuaikan sesuai kebutuhan)
+      const rpMapping = {
+        rookie: ["0-100 RP", "100-200 RP", "200-300 RP"],
+        bronze: ["300-400 RP", "400-500 RP", "500-600 RP"],
+        silver: ["600-700 RP", "700-800 RP", "800-900 RP"],
+        gold: ["900-1000 RP", "1000-1100 RP", "1100-1200 RP"],
+        platinum: ["1200-1300 RP", "1300-1400 RP", "1400-1500 RP"],
+        diamond: ["1500-1600 RP", "1600-1700 RP", "1700-1800 RP"],
+      };
+
+      // Mapping untuk konversi subdivisi dari roman ke angka
+      const subdivMapping = {
+        IV: "IV",
+        III: "III",
+        II: "II",
+        I: "I",
+      };
+
+      // Fungsi untuk mengupdate dropdown RP sesuai rank yang dipilih
+      function updateRpOptions(type, rank) {
+        const selectEl = document.getElementById(type + "-rp");
+        selectEl.innerHTML = "";
+        if (rank !== "master" && rpMapping[rank]) {
+          rpMapping[rank].forEach(function (optionText) {
+            const opt = document.createElement("option");
+            opt.value = optionText;
+            opt.textContent = optionText;
+            selectEl.appendChild(opt);
+          });
+          // Update checkout dengan opsi pertama
+          document.getElementById("checkout-" + type + "-rp").textContent =
+            selectEl.options[0].value;
+        }
+      }
+
+      // Fungsi untuk update checkout bagian rank (dengan subdivisi)
+      function updateCheckoutRank(type) {
+        const grid = document.getElementById(type + "-rank-grid");
+        const selectedRankItem = grid.querySelector(".rank-item.selected");
+        if (!selectedRankItem) return;
+        const rank = selectedRankItem.getAttribute("data-rank");
+        const rankName =
+          selectedRankItem.querySelector(".rank-name").textContent;
+        let checkoutText = rankName;
+        // Jika bukan master, ambil nilai subdivisi dari radio button yang dipilih
+        if (rank !== "master") {
+          const subdivRadio = document.querySelector(
+            'input[name="' + type + '-subdivision"]:checked'
+          );
+          if (subdivRadio) {
+            const subdivValue = subdivRadio.value;
+            checkoutText += " " + subdivMapping[subdivValue];
+          }
+        }
+        document.getElementById("checkout-" + type + "-rank").textContent =
+          checkoutText;
+      }
+
+      // Fungsi update checkout untuk dropdown dan input manual (RP)
+      function updateCheckoutRp(type) {
+        if (type === "current") {
+          const currentRPDropdown = document.getElementById(
+            "current-rp-dropdown"
+          );
+          if (currentRPDropdown.style.display !== "none") {
+            const selectEl = document.getElementById("current-rp");
+            document.getElementById("checkout-current-rp").textContent =
+              selectEl.value;
+          } else {
+            document.getElementById("checkout-current-rp").textContent =
+              document.getElementById("current-rp-master").value || "-";
+          }
+        } else if (type === "desired") {
+          const desiredRPDropdown = document.getElementById(
+            "desired-rp-dropdown"
+          );
+          if (desiredRPDropdown.style.display !== "none") {
+            const selectEl = document.getElementById("desired-rp");
+            document.getElementById("checkout-desired-rp").textContent =
+              selectEl.value;
+          } else {
+            document.getElementById("checkout-desired-rp").textContent =
+              document.getElementById("desired-rp-master").value || "-";
+          }
+        }
+      }
+
+      // Fungsi update checkout untuk server dan platform
+      function updateCheckoutExtra() {
+        const serverSelect = document.getElementById("server");
+        const platformSelect = document.getElementById("platform");
+        document.getElementById("checkout-server").textContent =
+          serverSelect.options[serverSelect.selectedIndex].text;
+        document.getElementById("checkout-platform").textContent =
+          platformSelect.options[platformSelect.selectedIndex].text;
+      }
+
+      // Fungsi untuk memilih rank (current atau desired)
+      function selectRank(type, el) {
+        const grid = document.getElementById(type + "-rank-grid");
+        grid.querySelectorAll(".rank-item").forEach(function (item) {
+          item.classList.remove("selected");
+        });
+        el.classList.add("selected");
+
+        // Update gambar dan teks legend
+        const selectedRank = el.getAttribute("data-rank");
+        const selectedName = el.querySelector(".rank-name").textContent;
+        document.getElementById(type + "-selected-img").src =
+          "/images/apex-legends/" + selectedRank + ".webp";
+        document.getElementById(type + "-selected-text").textContent =
+          (type === "current" ? "Rank saat ini: " : "Rank yang diinginkan: ") +
+          selectedName;
+
+        // Update checkout untuk rank
+        updateCheckoutRank(type);
+
+        // Jika rank master, tampilkan input manual, selain itu tampilkan subdivisi dan dropdown RP
+        if (selectedRank === "master") {
+          document.getElementById(type + "-subdivisions").style.display =
+            "none";
+          document.getElementById(type + "-rp-dropdown").style.display = "none";
+          document.getElementById(type + "-rp-input").style.display = "block";
+        } else {
+          document.getElementById(type + "-subdivisions").style.display =
+            "block";
+          document.getElementById(type + "-rp-dropdown").style.display =
+            "block";
+          document.getElementById(type + "-rp-input").style.display = "none";
+          updateRpOptions(type, selectedRank);
+        }
+      }
+
+      // Event listener untuk update checkout saat dropdown RP berubah
+      document
+        .getElementById("current-rp")
+        .addEventListener("change", function () {
+          updateCheckoutRp("current");
+        });
+      document
+        .getElementById("desired-rp")
+        .addEventListener("change", function () {
+          updateCheckoutRp("desired");
+        });
+
+      // Event listener untuk update checkout saat input RP untuk master berubah
+      document
+        .getElementById("current-rp-master")
+        .addEventListener("input", function () {
+          updateCheckoutRp("current");
+        });
+      document
+        .getElementById("desired-rp-master")
+        .addEventListener("input", function () {
+          updateCheckoutRp("desired");
+        });
+
+      // Event listener untuk subdivisi (current dan desired)
+      document
+        .querySelectorAll('input[name="current-subdivision"]')
+        .forEach(function (radio) {
+          radio.addEventListener("change", function () {
+            updateCheckoutRank("current");
+          });
+        });
+      document
+        .querySelectorAll('input[name="desired-subdivision"]')
+        .forEach(function (radio) {
+          radio.addEventListener("change", function () {
+            updateCheckoutRank("desired");
+          });
+        });
+
+      // Event listener untuk server dan platform
+      document
+        .getElementById("server")
+        .addEventListener("change", updateCheckoutExtra);
+      document
+        .getElementById("platform")
+        .addEventListener("change", updateCheckoutExtra);
+
+      // Inisialisasi default untuk current dan desired (dropdown RP diupdate sesuai rank default Rookie)
+      updateRpOptions("current", "rookie");
+      updateRpOptions("desired", "rookie");
+      updateCheckoutRank("current");
+      updateCheckoutRank("desired");
+      updateCheckoutExtra();
+    </script>
+  </body>
+</html>
